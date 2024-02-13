@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Test Suite 1" time="11.193" tests="3" failures="0" errors="0">
+   <testsuite name="Test Suite 1" tests="3" failures="0" errors="0" time="11.193" skipped="0" timestamp="13-02-2024T16:13:59" hostname="rizky - Rizky" id="Test Suites/Test Suite 1">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\rizky\\git\\katalon-finalapi-RizkyAriSaktiaPasi\\Reports\\20240213_161352\\Test Suite 1\\20240213_161352"/>
+         <property name="logFiles" value="C:\\Users\\rizky\\git\\katalon-finalapi-RizkyAriSaktiaPasi\\Reports\\20240213_161352\\Test Suite 1\\20240213_161352\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="rizky - Rizky"/>
+         <property name="hostAddress" value="172.16.213.208"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="9.3.0.212"/>
+      </properties>
+      <testcase name="Test Cases/POST/Get Token" time="6.187" classname="Test Cases/POST/Get Token" status="PASSED">
+         <system-out><![CDATA[13-02-2024T16:13:59 - [TEST_CASE][PASSED] - Test Cases/POST/Get Token: Test Cases/POST/Get Token
+
+13-02-2024T16:14:00 - [TEST_STEP][PASSED] - sendRequest(findTestObject("POST Create Token")): Send request successfully
+
+13-02-2024T16:14:04 - [MESSAGE][INFO] - HAR: C:\Users\rizky\git\katalon-finalapi-RizkyAriSaktiaPasi\Reports\20240213_161352\Test Suite 1\20240213_161352\requests\main\0.har
+
+13-02-2024T16:14:04 - [MESSAGE][PASSED] - Send request successfully
+
+13-02-2024T16:14:04 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("POST Create Token")): Send request successfully
+
+13-02-2024T16:14:05 - [MESSAGE][INFO] - HAR: C:\Users\rizky\git\katalon-finalapi-RizkyAriSaktiaPasi\Reports\20240213_161352\Test Suite 1\20240213_161352\requests\main\1.har
+
+13-02-2024T16:14:05 - [MESSAGE][PASSED] - Send request successfully
+
+13-02-2024T16:14:05 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+13-02-2024T16:14:05 - [TEST_STEP][PASSED] - result = slurper.parseText(response.getResponseText()): null
+
+13-02-2024T16:14:05 - [TEST_STEP][PASSED] - token = token: null
+
+13-02-2024T16:14:05 - [TEST_STEP][PASSED] - TOKEN = token: null
+
+13-02-2024T16:14:06 - [TEST_STEP][PASSED] - println(TOKEN): null
+
+13-02-2024T16:14:06 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+13-02-2024T16:14:06 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/DELETE/DELETE BOOKING" time="3.389" classname="Test Cases/DELETE/DELETE BOOKING" status="PASSED">
+         <system-out><![CDATA[13-02-2024T16:14:06 - [TEST_CASE][PASSED] - Test Cases/DELETE/DELETE BOOKING: Test Cases/DELETE/DELETE BOOKING
+
+13-02-2024T16:14:06 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/POST Create Token")): Send request successfully
+
+13-02-2024T16:14:07 - [MESSAGE][INFO] - HAR: C:\Users\rizky\git\katalon-finalapi-RizkyAriSaktiaPasi\Reports\20240213_161352\Test Suite 1\20240213_161352\requests\main\2.har
+
+13-02-2024T16:14:07 - [MESSAGE][PASSED] - Send request successfully
+
+13-02-2024T16:14:07 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+13-02-2024T16:14:07 - [MESSAGE][PASSED] - Verify response status code successfully
+
+13-02-2024T16:14:07 - [TEST_STEP][PASSED] - token = getElementPropertyValue(response, "token"): null
+
+13-02-2024T16:14:07 - [TEST_STEP][PASSED] - TOKEN = token: null
+
+13-02-2024T16:14:07 - [TEST_STEP][PASSED] - updated = sendRequestAndVerify(findTestObject("Object Repository/DELETE BOOKING", ["token":TOKEN])): Send request and verify the response successfully
+
+13-02-2024T16:14:09 - [MESSAGE][INFO] - HAR: C:\Users\rizky\git\katalon-finalapi-RizkyAriSaktiaPasi\Reports\20240213_161352\Test Suite 1\20240213_161352\requests\main\3.har
+
+13-02-2024T16:14:09 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+13-02-2024T16:14:09 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+13-02-2024T16:14:09 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+13-02-2024T16:14:09 - [MESSAGE][PASSED] - Verify response successfully
+
+13-02-2024T16:14:09 - [MESSAGE][PASSED] - All validation steps have been passed
+
+13-02-2024T16:14:09 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+13-02-2024T16:14:09 - [TEST_STEP][PASSED] - println(updated): null
+
+13-02-2024T16:14:09 - [TEST_STEP][PASSED] - verifyResponseStatusCode(updated, 201): Verify response status code successfully
+
+13-02-2024T16:14:09 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/GET/Get Booking" time="1.3" classname="Test Cases/GET/Get Booking" status="PASSED">
+         <system-out><![CDATA[13-02-2024T16:14:09 - [TEST_CASE][PASSED] - Test Cases/GET/Get Booking: Test Cases/GET/Get Booking
+
+13-02-2024T16:14:09 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Get Booking")): Send request successfully
+
+13-02-2024T16:14:10 - [MESSAGE][INFO] - HAR: C:\Users\rizky\git\katalon-finalapi-RizkyAriSaktiaPasi\Reports\20240213_161352\Test Suite 1\20240213_161352\requests\main\4.har
+
+13-02-2024T16:14:10 - [MESSAGE][PASSED] - Send request successfully
+
+13-02-2024T16:14:10 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+13-02-2024T16:14:10 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[13-02-2024T16:13:59 - [TEST_SUITE][PASSED] - Test Suite 1: Test Cases/GET/Get Booking]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

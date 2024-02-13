@@ -1,0 +1,25 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test Suite 1,,,,13-02-2024 16:13:59,13-02-2024 16:14:10,"11,193s",PASSED
+,,,,,,,
+Test Cases/POST/Get Token,,,,13-02-2024 16:13:59,13-02-2024 16:14:06,"6,187s",PASSED
+"sendRequest(findTestObject(""POST Create Token""))",,,,13-02-2024 16:14:00,13-02-2024 16:14:04,"3,988s",PASSED
+"response = sendRequest(findTestObject(""POST Create Token""))",,,,13-02-2024 16:14:04,13-02-2024 16:14:05,"1,361s",PASSED
+slurper = new groovy.json.JsonSlurper(),,,,13-02-2024 16:14:05,13-02-2024 16:14:05,"0,028s",PASSED
+result = slurper.parseText(response.getResponseText()),,,,13-02-2024 16:14:05,13-02-2024 16:14:05,"0,041s",PASSED
+token = token,,,,13-02-2024 16:14:05,13-02-2024 16:14:05,"0,022s",PASSED
+TOKEN = token,,,,13-02-2024 16:14:05,13-02-2024 16:14:06,"0,137s",PASSED
+println(TOKEN),,,,13-02-2024 16:14:06,13-02-2024 16:14:06,"0,008s",PASSED
+"verifyResponseStatusCode(response, 200)",,,,13-02-2024 16:14:06,13-02-2024 16:14:06,"0,034s",PASSED
+,,,,,,,
+Test Cases/DELETE/DELETE BOOKING,,,,13-02-2024 16:14:06,13-02-2024 16:14:09,"3,389s",PASSED
+"response = sendRequest(findTestObject(""Object Repository/POST Create Token""))",,,,13-02-2024 16:14:06,13-02-2024 16:14:07,"1,331s",PASSED
+"verifyResponseStatusCode(response, 200)",,,,13-02-2024 16:14:07,13-02-2024 16:14:07,"0,011s",PASSED
+"token = getElementPropertyValue(response, ""token"")",,,,13-02-2024 16:14:07,13-02-2024 16:14:07,"0,098s",PASSED
+TOKEN = token,,,,13-02-2024 16:14:07,13-02-2024 16:14:07,"0,003s",PASSED
+"updated = sendRequestAndVerify(findTestObject(""Object Repository/DELETE BOOKING"", [""token"":TOKEN]))",,,,13-02-2024 16:14:07,13-02-2024 16:14:09,"1,711s",PASSED
+println(updated),,,,13-02-2024 16:14:09,13-02-2024 16:14:09,"0,004s",PASSED
+"verifyResponseStatusCode(updated, 201)",,,,13-02-2024 16:14:09,13-02-2024 16:14:09,"0,003s",PASSED
+,,,,,,,
+Test Cases/GET/Get Booking,,,,13-02-2024 16:14:09,13-02-2024 16:14:10,"1,300s",PASSED
+"response = sendRequest(findTestObject(""Get Booking""))",,,,13-02-2024 16:14:09,13-02-2024 16:14:10,"1,176s",PASSED
+"verifyResponseStatusCode(response, 200)",,,,13-02-2024 16:14:10,13-02-2024 16:14:10,"0,005s",PASSED
